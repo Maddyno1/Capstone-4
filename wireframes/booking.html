@@ -1,91 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head?>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1">
 
-    <title>Freedom Park Library</title>
-    <meta name="description" content="Room Reservation">
+    <title>Room Reservation &mdash; Freedom Park Library</title>
+    <meta name="description" content="Reserve a study room at Freedom Park">
     <meta name="author" content="Freedom Park Municipality">
 
-    <link rel="stylesheet" href="styles.css">
-    </head>
+    <link rel="stylesheet" href="main.css">
+</head>
 
-    <body>
-        <header>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <a href="landing.html">
             <img src="images/logo.png" alt="Freedom Park library logo" width="300">
-        </header>
-        <nav>
-            <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="listing.html">Listing</a></li>
-                <li><a href="book.html">Room Reservation</a></li>
-            </ul>
-        </nav>
+        </a>
+    </header>
+
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="listing.html">Listing</a></li>
+            <li><a href="booking.html" aria-current="page">Room Reservation</a></li>
+        </ul>
+    </nav>
 
 
-        <main>
-            <section>
+    <main id="main" tabindex="-1">
+        <div class="with-aside">
+            <section aria-labelledby="page-title">
+                <h1 id="page-title">Room Reservation</h1>
+                <p>Fields marked (required) must be completed before you reserve</p>
+
                 <form action="#" method="POST">
                     <fieldset>
-                        <legend>Room Reservation</legend>
+                        <legend>Booking details</legend>
 
-                        <article>
-                            <label for="room">Room</label><br>
-                            <select name="room" id="room">
-                                <option value="Room1">Room 1</option>
-                                <option value="Room2">Room2</option>
-                                <option value="Room3">Room 3</option>
-                            </select><br>
+                        <div class="field">
+                            <label for="room">Room (required)</label><br>
+                            <select name="room" id="room" required>
+                                <option value="">Choose a room</option>
+                                <option value="room-1">Room 1</option>
+                                <option value="room-2">Room2</option>
+                                <option value="room-3">Room 3</option>
+                            </select>
+                        </div>
 
-                            <label for="Reason">Reason for Reservation</label><br>
-                            <textarea name="message" id="message" rows="4" maxlength="100"
-                                placeholder="Enter message..."></textarea><br>
+                        <div class="field">
+                            <label for="reason">Reason for Reservation</label>
+                            <p class="hint" id="reason-hint">Optional. Up to 100 characters.</p>
+                            <textarea name="reason" id="reason" rows="4" maxlength="100"
+                                aria-describedby="reason-hint"></textarea>
+                        </div>
 
-                            <label for="start-date">Choose a date:</label>
-                            <input type="date" id="start-date" name="trip-start">
+                        <div class="field">
+                            <label for="date">Date (required)</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
 
-                            <label for="duration">Duration (minutes):</label>
-                            <input type="number" id="duration" name="duration" min="15" max="120" step="15" required>
-                        </article>
-
-                        <article>
-                            <label for="name">Name</label>
-                            <input type="text" name="Name" id="name" required>
-
-
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required>
-
-
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="0721234567"
-                                required>
-
-                            <button id="button" type="submit">Reserve</button>
-                        </article>
+                        <div class="field">
+                            <label for="duration">Duration in minutes (required)</label>
+                            <p class="hint" id="duration-hint">Choose 15 to 120</p>
+                            <input type="number" id="duration" name="duration" min="15" max="120" step="15" required
+                                aria-describedby="duration-hint">
+                        </div>
                     </fieldset>
+
+                    <fieldset>
+                        <legend>Your details</legend>
+
+                        <div class="field">
+                            <label for="name">Full name (required)</label>
+                            <input type="text" id="name" name="Name" autocomplete="name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email address (required)</label>
+                            <input type="text" id="email" name="email" autocomplete="name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number (required)</label>
+                            <p class="hint" id="phone-hint">10 digits, no spaces. For example: 0721234567</p>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{10}" required
+                                aria-describedby="phone-hint">
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Reserve room</button>
                 </form>
             </section>
-            <div class="push"></div>
-        </main>
-    </body>
 
+            <aside aria-labelledby="help-title">
+                <h2 id="help-title">Need help booking?</h2>
+                <p>Call the library on 011 365 5764 and a staff member can reserve a room for you.</p>
+            </aside>
+        </div>
+    </main>
 
     <footer>
         <div>
-            <img src="images/logo.png" alt="Freedom Park library logo" width="200">
+            <img src="images/logo.png" alt="" width="200">
         </div>
         <div>
             <p>&copy; 2026 Freedom Park Municipality. All rights reserved.</p>
         </div>
         <div>
-            <a href="gmail.com">Email</a>
-            <a href="facebook.com">Facebook</a>
-            <a href="instagram.com">Instagram</a>
+            <a href="mailto:info@freedompark.example">Email</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
             <p>Phone: 011 365 5764</p>
         </div>
     </footer>
+</body>
 
 </html>

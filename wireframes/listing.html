@@ -1,100 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head?>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1">
 
-    <title>Freedom Park Library</title>
-    <meta name="description" content="Catalogue Page">
+    <title>Catalogue &mdash; Freedom Park Library</title>
+    <meta name="description" content="Search and browse the Freedom Park Library catalogue">
     <meta name="author" content="Freedom Park Municipality">
 
-    <link rel="stylesheet" href="styles.css">
-    </head>
+    <link rel="stylesheet" href="main.css">
+</head>
 
-    <body>
-        <header>
+<body>
+    <a clas="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <a href="landing.html">
             <img src="images/logo.png" alt="Freedom Park library logo" width="300">
-        </header>
+        </a>
+    </header>
 
-        <nav>
-            <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="listing.html">Listing</a></li>
-                <li><a href="book.html">Room Reservation</a></li>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="listing.html" aria-current="page">Catalogue</a></li>
+            <li><a href="booking.html">Room Reservation</a></li>
+        </ul>
+    </nav>
+
+    <main id="main" tabindex="-1">
+        <h1>Library Catalogue</h1>
+
+        <section aria-labelledby="search-title">
+            <h2 id="search-title">Search the Catalogue</h2>
+
+            <form action="#" method="GET" role="search" aria-label="Catalogue">
+                <div class="search-form">
+                    <div class="field">
+                        <label for="q">Search by title, author or keyword</label>
+                        <input type="search" id="q" name="q">
+                    </div>
+                    <button type="submit">Search</button>
+                </div>
+
+                <details>
+                    <summary>Filter by category</summary>
+                    <fieldset>
+                        <legend>Categories</legend>
+                        <div class="field">
+                            <input type="checkbox" id="cat-educational" name="category" value="educational">
+                            <label for="cat-educational">Educational</label>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" id="cat-fiction" name="category" value="fiction">
+                            <label for="cat-fiction">Fiction</label>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" id="cat-self-help" name="category" value="self-help">
+                            <label for="cat-self-help">Self-help</label>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" id="cat-history" name="category" value="history">
+                            <label for="cat-history">History</label>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Apply filters</button>
+                </details>
+            </form>
+        </section>
+
+        <section aria-labelledby="popular-title">
+            <h2 id="popular-title">Most Popular</h2>
+            <p>Showing 5 titles</p>
+            <ul class="card-grid">
+                <li class="card">
+                    <figure>
+                        <img src="images/book1.jpg" alt="" width="400">
+                        <figcaption>The Gift of Not Belonging</figcaption>
+                    </figure>
+                </li>
+                <li class="card">
+                    <figure>
+                        <img src="images/book2.jpg" alt="" width="400">
+                        <figcaption>The Mountain Is You</figcaption>
+                    </figure>
+                </li>
+                <li class="card">
+                    <figure>
+                        <img src="images/book4.jpg" alt="" width="400">
+                        <figcaption>An Elephant in My Kitchen</figcaption>
+                    </figure>
+                </li>
+                <li class="card">
+                    <figure>
+                        <img src="images/book5.jpg" alt="" width="400">
+                        <figcaption>Game Theory</figcaption>
+                    </figure>
+                </li>
+                <li class="card">
+                    <figure>
+                        <img src="images/book6.jpg" alt="" width="400">
+                        <figcaption>A Gentleman in Moscow</figcaption>
+                    </figure>
+                </li>
             </ul>
-        </nav>
+        </section>
 
-        <main>
-            <section>
-                <article>
-                    <h2>Search Catalogue</h2>
-                    <form action="/search" method="GET">
-                        <input type="search" name="q" placeholder="Search..." aria-label="Search through site content">
-                        <button type="submit" class="search-button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </article>
-            </section>
-
-            <section>
-                <article>
-                    <h2>Most Popular</h2>
-                    <img src="images/book1.jpg" alt="Image of book: The gift of not belonging" width="400">
-                    <caption>The Gift Of Not Belonging</caption>
-
-                    <img src="images/book2.jpg" alt="Image of book: The mountain is you" width="400">
-                    <caption>The Mountain Is You</caption>
-
-                    <img src="images/book4.jpg" alt="Image of book: An Elephant In My Kitchen" width="400">
-                    <caption>An Elephant In My Kitchen</caption>
-
-                    <img src="images/book5.jpg" alt="Image of book: Game Theory" width="400">
-                    <caption>Game Theory</caption>
-
-                    <img src="images/book6.jpg" alt="Image of book: A Gentlman in Moscow" width="400">
-                    <caption>A Gentlman In Moscow</caption>
-                </article>
-            </section>
-
-            <section>
-                <article>
-                    <h2>Categories</h2>
+        <section aria-labelledby="categories-title">
+            <h2 id="categories-title">Categories</h2>
+            <div class="card-grid">
+                <article class="card">
                     <h3>Educational</h3>
-                    <img src="images/cat1.jpg" alt="An illustration of a tree growing out of a book with images floating around it" width="400">
-                    <p></p>
-
-                    <h3>Fiction</h3>
-                    <img src="images/cat2.jpg" alt="An illustration of an entire forest growing out of a book, and a sunset in the background" width="400">
-                    <p></p>
-
-                    <h3>Self-help</h3>
-                    <img src="images/cat3.jpg" alt="An illustration of someone watering a plant on their head" width="400">
-                    <p></p>
-
-                    <h3>History</h3>
-                    <img src="images/cat4.jpg" alt="Illustrations of South African History" width="400">
-                    <p></p>
+                    <img src="images/cat1.jpg" alt="" width="400">
                 </article>
-            </section>
-        </main>
-    </body>
 
+                <article class="card">
+                    <h3>Fiction</h3>
+                    <img src="images/cat2.jpg" alt="" width="400">
+                </article>
+
+                <article class="card">
+                    <h3>Self-help</h3>
+                    <img src="images/cat3.jpg" alt="" width="400">
+                </article>
+
+                <article class="card">
+                    <h3>History</h3>
+                    <img src="images/cat4.jpg" alt="" width="400">
+                </article>
+            </div>
+        </section>
+
+        <aside aria-labelledby="help-title">
+            <h2 id="help-title">Can&apos;t find a title?</h2>
+            <p>Call 011 365 5764 and a librarian will search for you.</p>
+        </aside>
+    </main>
 
     <footer>
         <div>
-            <img src="images/logo.png" alt="Freedom Park library logo" width="200">
+            <img src="images/logo.png" alt="" width="200">
         </div>
         <div class="copyright">
-            <p>Copyright Freedom Park Municipality</p>
+            <p>&copy; 2026 Freedom Park Municipality. All rights reserved.</p>
         </div>
         <div>
-            <a href="gmail.com">Email</a>
-            <a href="facebook.com">Facebook</a>
-            <a href="instagram.com">Instagram</a>
+            <a href="mailto:info@freedompark.example">Email</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
             <p>Phone: 011 365 5764</p>
         </div>
     </footer>
+</body>
 
 </html>

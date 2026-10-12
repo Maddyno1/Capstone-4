@@ -1,113 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head?>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1">
 
-    <title>Freedom Park Library</title>
-    <meta name="description" content="Landing Page">
+    <title>Home &mdash; Freedom Park Library</title>
+    <meta name="description" content="Freedom Park Library: catalogue, events and room reservations">
     <meta name="author" content="Freedom Park Municipality">
 
-    <link rel="stylesheet" href="styles.css">
-    </head>
+    <link rel="stylesheet" href="main.css">
+</head>
 
+<body>
+    <a href="landing.html">
+        <img src="images/logo.png" alt="Freedom Park Library, home" width="300">
+    </a>
 
-    <body>
-        <header>
-            <img src="images/logo.png" alt="Freedom Park library logo" width="300">
-        </header>
+    <header>
+        <img src="images/logo.png" alt="Freedom Park library logo" width="300">
+    </header>
 
-        <nav>
-            <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="listing.html">Listing</a></li>
-                <li><a href="book.html">Room Reservation</a></li>
-            </ul>
-        </nav>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="landing.html" aria-current="page">Home</a></li>
+            <li><a href="listing.html">Catalogue</a></li>
+            <li><a href="booking.html">Room Reservation</a></li>
+        </ul>
+    </nav>
 
-        <main>
-            <section>
-                <hero>
-                    <img src="images/hero.jpg" alt="Freedom Park library logo" width="400">
-                    <h1>About Freedom Park Library</h1>
-                    <p>
-                        Freedom Park Library was founded on a simple belief: that every person deserves a place to
-                        learn, grow, and be uplifted.
-                        As a community library, we offer a welcoming, quiet, and encouraging environment where learners
-                        and adults alike can study,
-                        read, and pursue their goals. Our doors are open to the school learner working on homework, the
-                        job seeker building new skills,
-                        and the lifelong learner who simply wants to explore. We see the library as more than a
-                        collection of books. It is a shared
-                        space where knowledge is freely available, curiosity is nurtured, and people are supported to
-                        grow in every aspect of their lives.
-                        Together, we are building a community where learning is within everyone&apos;s reach.
-                    </p>
-                </hero>
-            </section>
+    <main id="main" tabindex="-1">
+        <div class="with-aside">
+            <div>
+                <section class="hero" aria-labelledby="about-title">
+                    <img src="images/hero.jpg" alt="" width="400">
+                    <div>
+                        <h1 id="about-title">About Freedom Park Library</h1>
+                        <p>
+                            Freedom Park Library was founded on a simple belief: that every person deserves a place to
+                            learn, grow, and be uplifted. As a community library, we offer a welcoming, quiet, and
+                            encouraging environment where learners and adults alike can study,
+                            read, and pursue their goals. Our doors are open to the school learner working on homework,
+                            the
+                            job seeker building new skills, and the lifelong learner who simply wants to explore.
+                        </p>
+                        <p>
+                            We see the library as more than a collection of books. It is a shared space where knowledge
+                            is freely available, curiosity is nurtured, and people are supported to grow in every aspect
+                            of their lives. Together, we are building a community where learning is within
+                            everyone&apos;s
+                            reach.
+                        </p>
+                    </div>
+                </section>
 
-            <section>
-                <article>
-                    <h2>Popular Offerings</h2>
-                    <img src="images/book1.jpg" alt="Image of book: The gift of not belonging" width="400">
-                    <caption>The Gift Of Not Belonging</caption>
+                <section aria-labelledby="popular-title">
+                    <h2 id="popular-title">Popular Offerings</h2>
 
-                    <img src="images/book2.jpg" alt="Image of book: The mountain is you" width="400">
-                    <caption>The Mountain Is You</caption>
+                    <ul class="card-grid">
+                        <li class="card">
+                            <figure>
+                                <img src="images/book1.jpg" alt="" width="400">
+                                <figcaption>The Gift Of Not Belonging</figcaption>
+                            </figure>
+                        </li>
+                        <li class="card">
+                            <figure>
+                                <img src="images/book2.jpg" alt="" width="400">
+                                <figcaption>The Mountain Is You</figcaption>
+                            </figure>
+                        </li>
+                        <li class="card">
+                            <figure>
+                                <img src="images/book4.jpg" alt="" width="400">
+                                <figcaption>An Elephant In My Kitchen</figcaption>
+                            </figure>
+                        </li>
+                        <li class="card">
+                            <figure>
+                                <img src="images/book5.jpg" alt="" width="400">
+                                <figcaption>Game Theory</figcaption>
+                            </figure>
+                        </li>
+                        <ul>
+                </section>
 
-                    <img src="images/book4.jpg" alt="Image of book: An Elephant In My Kitchen" width="400">
-                    <caption>An Elephant In My Kitchen</caption>
+                <section aria-labelledby="events-title">
+                    <h2 id="events-title">Event Registration</h2>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Science model building competition</h3>
+                            <img src="images/event1.jpg" alt="A young girl working on a science project" width="400">
+                            <p>
+                                <a href="events.html">Register<span class="visually-hidden"> for the Science model
+                                        building competition</span></a>
+                            </p>
+                        </article>
+                        <article class="card">
+                            <h3>Sharon&apos;s book launch and love conversations</h3>
+                            <img src="images/event2.jpeg" alt="Poster text: Sharon's Book launch and love conversations"
+                                width="400">
+                            <p>
+                                <a href="events.html">Register<span class="visually-hidden"> for Sharon&apos;s book
+                                        launch and love conversations</span></a>
+                            </p>
+                        </article>
+                    </div>
+                </section>
 
-                    <img src="images/book5.jpg" alt="Image of book: Game Theory" width="400">
-                    <caption>Game Theory</caption>
-                </article>
-            </section>
+                <section aria-labelledby="team-title">
+                    <h2 id="team-title">Meet our team!</h2>
 
-            <section>
-                <article>
-                    <h2>Events Registration</h2>
+                    <ul class="card-grid">
+                        <li class="card">
+                            <figure>
+                                <img src="images/librarian1.jpg" alt="" width="50">
+                                <figcaption>Library Director: Cynthia Khubeka</figcaption>
+                            </figure>
+                        </li>
 
-                    <h3></h3>
-                    <img src="images/event1.jpg" alt="Image of a young girl working on a science project" width="400">
-                    <p>Science model building competition</p>
-                    <a href="events.html">Register</a>
+                        <li class="card">
+                            <figure>
+                                <img src="images/librarian2.jpg" alt="" width="50">
+                                <figcaption>Assitant to Director: Tyrique Feldman</figcaption>
+                            </figure>
+                        </li>
 
-                    <h3></h3>
-                    <img src="images/event2.jpeg" alt="Image of the text: Sharon's Book launch and love conversations" width="400">
-                    <p>Sharon's Book launch and love conversations</p>
-                    <a href="events.html">Register</a>
-                </article>
-            </section>
+                        <li class="card">
+                            <figure>
+                                <img src="images/librarian3.jpg" alt="" width="50">
+                                <figcaption>Library Technician: Dimpho Mofokeng</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+            </div>
 
-            <section>
-                <h2>Meet our team!</h2>
-                <img src="images/librarian1.jpg" alt="Image of library director" width="50">
-                <p>Library Director: Cynthia Khubeka</p>
-
-                <img src="images/librarian2.jpg" alt="Image of the assistant to the director" width="50">
-                <p>Assitant to Director: Tyrique Feldman</p>
-
-                <img src="images/librarian3.jpg" alt="Image of library technician" width="50">
-                <p>Library Technician: Dimpho Mofokeng</p>
-            </section>
-        </main>
-    </body>
-
+            <aside aria-labelledby="help-title">
+                <h2 id="help-title">Need assistance?</h2>
+                <p>Call us on 011 365 5764 and a staff member can help you find a title, register for an event or
+                    reserve a room.</p>
+                <p><a href="booking.html">Reserve a room</a></p>
+            </aside>
+        </div>
+    </main>
 
     <footer>
         <div>
-            <img src="images/logo.png" alt="Freedom Park library logo" width="200">
-        </div>
-        <div class="copyright">
-            <p>Copyright Freedom Park Municipality</p>
+            <img src="images/logo.png" alt="" width="200">
         </div>
         <div>
-            <a href="gmail.com">Email</a>
-            <a href="facebook.com">Facebook</a>
-            <a href="instagram.com">Instagram</a>
+            <p>&copy; 2026 Freedom Park Municipality. All rights reserved.</p>
+        </div>
+        <div>
+            <a href="mailto:info@freedompark.example">Email</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
             <p>Phone: 011 365 5764</p>
         </div>
     </footer>
+</body>
 
 </html>
