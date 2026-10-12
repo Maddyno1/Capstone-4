@@ -13,21 +13,19 @@
 </head>
 
 <body>
-    <a clas="skip-link" href="#main">Skip to main content</a>
-
     <header>
         <a href="landing.html">
             <img src="images/logo.png" alt="Freedom Park library logo" width="300">
         </a>
-    </header>
 
-    <nav aria-label="Main">
-        <ul>
-            <li><a href="landing.html">Home</a></li>
-            <li><a href="listing.html" aria-current="page">Catalogue</a></li>
-            <li><a href="booking.html">Room Reservation</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Main">
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="listing.html" aria-current="page">Catalogue</a></li>
+                <li><a href="booking.html">Room Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main id="main" tabindex="-1">
         <h1>Library Catalogue</h1>
@@ -43,30 +41,6 @@
                     </div>
                     <button type="submit">Search</button>
                 </div>
-
-                <details>
-                    <summary>Filter by category</summary>
-                    <fieldset>
-                        <legend>Categories</legend>
-                        <div class="field">
-                            <input type="checkbox" id="cat-educational" name="category" value="educational">
-                            <label for="cat-educational">Educational</label>
-                        </div>
-                        <div class="field">
-                            <input type="checkbox" id="cat-fiction" name="category" value="fiction">
-                            <label for="cat-fiction">Fiction</label>
-                        </div>
-                        <div class="field">
-                            <input type="checkbox" id="cat-self-help" name="category" value="self-help">
-                            <label for="cat-self-help">Self-help</label>
-                        </div>
-                        <div class="field">
-                            <input type="checkbox" id="cat-history" name="category" value="history">
-                            <label for="cat-history">History</label>
-                        </div>
-                    </fieldset>
-                    <button type="submit">Apply filters</button>
-                </details>
             </form>
         </section>
 
@@ -139,9 +113,6 @@
     </main>
 
     <footer>
-        <div>
-            <img src="images/logo.png" alt="" width="200">
-        </div>
         <div class="copyright">
             <p>&copy; 2026 Freedom Park Municipality. All rights reserved.</p>
         </div>

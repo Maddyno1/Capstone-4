@@ -13,22 +13,19 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-
     <header>
         <a href="landing.html">
             <img src="images/logo.png" alt="Freedom Park library logo" width="300">
         </a>
+
+        <nav aria-label="Main">
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="listing.html">Catalogue</a></li>
+                <li><a href="booking.html" aria-current="page">Room Reservation</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav aria-label="Main">
-        <ul>
-            <li><a href="landing.html">Home</a></li>
-            <li><a href="listing.html">Listing</a></li>
-            <li><a href="booking.html" aria-current="page">Room Reservation</a></li>
-        </ul>
-    </nav>
-
 
     <main id="main" tabindex="-1">
         <div class="with-aside">
@@ -45,7 +42,7 @@
                             <select name="room" id="room" required>
                                 <option value="">Choose a room</option>
                                 <option value="room-1">Room 1</option>
-                                <option value="room-2">Room2</option>
+                                <option value="room-2">Room 2</option>
                                 <option value="room-3">Room 3</option>
                             </select>
                         </div>
@@ -103,9 +100,6 @@
     </main>
 
     <footer>
-        <div>
-            <img src="images/logo.png" alt="" width="200">
-        </div>
         <div>
             <p>&copy; 2026 Freedom Park Municipality. All rights reserved.</p>
         </div>
