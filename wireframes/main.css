@@ -1,0 +1,58 @@
+/* Reset sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+/* The parent search container */
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 50px; /* Gives the rounded look */
+  padding: 5px 15px;
+  transition: border-color 0.3s ease;
+}
+
+/* Highlights the container border when the input is focused */
+.search-box:focus-within {
+  border-color: #007bff;
+}
+
+/* The actual text input field */
+.search-input {
+  flex: 1; /* Takes up all remaining space */
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  background: transparent;
+}
+
+/* The icon submit button */
+.search-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #555;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Change icon color on hover */
+.search-button:hover {
+  color: #007bff;
+}

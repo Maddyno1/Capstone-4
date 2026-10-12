@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+
+    <title>Freedom Park Library</title>
+    <meta name="description" content="Room Reservation">
+    <meta name="author" content="Freedom Park Municipality">
+
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="images/logo.png" alt="Freedom Park library logo" width="400">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="listing.html">Listing</a></li>
+                <li><a href="book.html">Room Reservation</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Room Reservation</legend>
+
+                        <section>
+                            <label for="room">Room</label><br>
+                            <select name="room" id="room">
+                                <option value="Room1">Room 1</option>
+                                <option value="Room2">Room2</option>
+                                <option value="Room3">Room 3</option>
+                            </select><br>
+
+                            <label for="Reason">Reason for Reservation</label><br>
+                            <textarea name="message" id="message" rows="4" maxlength="100"
+                                placeholder="Enter message..."></textarea><br>
+
+                            <label for="start-date">Choose a date:</label>
+                            <input type="date" id="start-date" name="trip-start">
+
+                            <label for="duration">Duration (minutes):</label>
+                            <input type="number" id="duration" name="duration" min="15" max="120" step="15" required>
+                        </section>
+
+                        <section>
+                            <label for="name">Name</label>
+                            <input type="text" name="Name" id="name" required>
+
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+
+
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="0721234567"
+                                required>
+
+                            <button id="button" type="submit">Reserve</button>
+                        </section>
+                    </fieldset>
+                </form>
+            </section>
+            <div class="push"></div>
+        </main>
+    </body>
+
+
+    <footer>
+        <div>
+            <img src="images/logo.png" alt="Freedom Park library logo" width="200">
+        </div>
+        <div class="copyright">
+            <p>Copyright Freedom Park Municipality</p>
+        </div>
+        <div>
+            <a href="gmail.com">Email</a>
+            <a href="facebook.com">Facebook</a>
+            <a href="instagram.com">Instagram</a>
+            <p>Phone: 011 365 5764</p>
+        </div>
+    </footer>
+
+</html>
