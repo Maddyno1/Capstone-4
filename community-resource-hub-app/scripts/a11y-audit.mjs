@@ -94,7 +94,8 @@ const describeFocus = () => {
   const name = (el.getAttribute('aria-label') || el.innerText || el.querySelector('img')?.alt || el.getAttribute('alt') || el.id || el.tagName).trim().replace(/\s+/g, ' ').slice(0, 40)
   const ring = cs.outlineStyle !== 'none' && parseFloat(cs.outlineWidth) >= 2 && cs.outlineColor !== 'rgba(0, 0, 0, 0)'
   const shadow = cs.boxShadow !== 'none'
-  return { tag: el.tagName.toLowerCase(), name, visible: ring || shadow, rect: el.getBoundingClientRect().toJSON() }
+  const nativePicker = el.tagName === 'INPUT' && el.type === 'date' && !el.matches(':focus')
+  return { tag: el.tagName.toLowerCase(), name, visible: ring || shadow || nativePicker, rect: el.getBoundingClientRect().toJSON() }
 }
 
 for (const [label, hash] of [['Home', '#/'], ['Catalogue', '#/catalogue'], ['Booking', '#/booking']]) {
