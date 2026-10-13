@@ -41,12 +41,12 @@ npm run build && npm run audit
 
 ### 3. Verification and testing audit
 
-**Automated.** Reproducible with `npm test` and `npm run audit`; details are in `docs/`.
+**Automated.** Reproducible with npm test and npm run audit; full reports are in community-resource-hub-app/docs/ (a11y-audit-results.md and the lighthouse-*.report.html files).
 
 | Tool | Scope | Result |
 |---|---|---|
 | Lighthouse 13.5.0, accessibility | Home, Catalogue, Booking (production build) | **100 / 100 / 100** |
-| axe-core 4.14.0, Chromium 141 | 10 views and states at 1280px and 320px, WCAG 2.0 to 2.2 A/AA plus best-practice | **0 violations** |
+| axe-core 4.14.0, Chromium 156.0.8078.4 | 10 views and states at 1280px and 320px, WCAG 2.0 to 2.2 A/AA plus best-practice | **0 violations** |
 | Vitest + jest-axe | 65 tests, including error, open-filter and open-dialog states | all pass |
 | Reflow | every state at 320px | no horizontal scroll |
 
