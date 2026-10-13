@@ -54,12 +54,12 @@ npm run build && npm run audit
 
 **Manual screen reader log.**
 
-| # | Steps | Expected | NVDA + Firefox |
+| # | Steps | Expected | NVDA + CHROME |
 |---|---|---|---|
-| 1 | Tab, Enter | "Skip to main content, link"; focus on main ||
-| 2 | Activate "Catalogue" | "Library Catalogue, heading level 1" |  |
-| 3 | Search "moscow", Enter | "1 title found for moscow." |  |
-| 4 | Open filter; press "Fiction" | "expanded"; "Fiction, toggle button, pressed"; "2 titles found in Fiction." |  |
-| 5 | Booking: Tab out of empty name | "Full name: Enter your full name." |  |
-| 6 | Booking: submit empty | "Form not sent. 6 problems..."; focus on Room, "invalid entry" |  |
-| 7 | Open event dialog; Escape | Title read; focus returns to the Register button |  |
+| 1 | Tab, Enter | "Skip to main content, link"; focus on main | Yes |
+| 2 | Activate "Catalogue" | "Library Catalogue, heading level 1" | Yes |
+| 3 | Search "moscow", Enter | "1 title found for moscow." | Yes |
+| 4 | Open filter; press "Fiction" | "expanded"; "Fiction, toggle button, pressed"; "2 titles found in Fiction." | Yes |
+| 5 | Booking: Tab out of empty name | "Full name: Enter your full name." | Yes |
+| 6 | Booking: submit empty | "Form not sent. 6 problems..."; focus on Room, "invalid entry" | Yes |
+| 7 | Open event dialog; Escape | Title read; focus returns to the Register button | Yes |
