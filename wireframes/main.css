@@ -1,3 +1,24 @@
+/* ==========================================================
+   COLOUR CONTRAST LOG (WCAG 2.2 SC 1.4.3 and 1.4.11)
+   Ratios computed with the WCAG relative-luminance formula.
+   Text needs 4.5:1 minimum. UI components need 3:1 minimum.
+
+   Pairing                               Ratio    Result
+   --text         #1A202C on #FFFFFF     16.32:1  Pass (AAA)
+   --text         #1A202C on #F7FAFC     15.57:1  Pass (AAA)
+   --text-muted   #4A5568 on #FFFFFF      7.53:1  Pass (AAA)
+   --text-muted   #4A5568 on #F7FAFC      7.18:1  Pass (AAA)
+   --brand        #2B6CB0 on #FFFFFF      5.42:1  Pass (AA)
+   --brand        #2B6CB0 on #F7FAFC      5.17:1  Pass (AA)
+   --brand-hover  #2C5282 on #FFFFFF      7.97:1  Pass (AAA)
+   --on-dark      #FFFFFF on #1A365D     12.14:1  Pass (AAA)
+   --error        #C53030 on #FFFFFF      5.47:1  Pass (AA)
+   --error        #C53030 on #F7FAFC      5.22:1  Pass (AA)
+   --visited      #553C9A on #FFFFFF      8.40:1  Pass (AAA)
+   --border       #4A5568 on #FFFFFF      7.53:1  Pass (non-text 3:1)
+   --focus        #2B6CB0 on #FFFFFF      5.42:1  Pass (non-text 3:1)
+   ========================================================== */
+
 :root {
   --text: #1A202C;
   --text-muted: #4A5568;
